@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 
-
 xmean = {}
 xstd = {}
 
@@ -16,4 +15,8 @@ def zscore(x, key):
 
     xmean[key] = x.mean()
     xstd[key] = np.std(x)
-    return (x-xmean[key])/xstd[key]
+    return (x - xmean[key]) / xstd[key]
+
+
+def test_zscore(x, key):
+    return (x - xmean[key]) / xstd[key]
